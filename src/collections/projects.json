@@ -1,38 +1,30 @@
 [
 	{
-		"name": "TempMail.Best",
-		"description": "Best Temporary Email.",
-		"image": "/assets/images/projects/tempmail.best.png",
-		"url": "https://tempmail.best"
+		"name": "AWS Cloud Resume Challenge",
+		"description": "Build and deploy your resume using HTML, CSS, JavaScript, Amazon S3, CloudFront, DynamoDB, API Gateway, Lambda, CloudFormation, IAM, Route 53, and RDS.",
+		"image": "/assets/images/projects/aws.crc.PNG",
+		"url": "https://github.com/araxia55/CRC",
+		"tags": ["#AWS", " #Serverless", " #API Gateway", " #Lambda"] 
 	},
 	{
-		"name": "DNS.Surf",
-		"description": "Querying DNS Resolution Results in Different Regions Worldwide.",
-		"image": "/assets/images/projects/dns.surf.png",
-		"url": "https://dns.surf"
+		"name": "Automate your AWS Organizations Setup",
+		"description": "Automate the setup of AWS organizations using org-formation.",
+		"image": "/assets/images/projects/aws_organizations.PNG",
+		"url": "/",
+		"tags": [" #WIP", " #AWS" , " #Identity Center", " #SSO", " #IAM"]
 	},
 	{
-		"name": "HTML.ZONE",
-		"description": "Web Toolbox.",
-		"image": "/assets/images/projects/html.zone.png",
-		"url": "https://html.zone"
+		"name": "How to setup a Custom Domain Name in AWS Route53",
+		"description": "Use a Custom Domain Name from Namecheap, etc. in AWS",
+		"image": "/assets/images/projects/dns.PNG",
+		"url": "/",
+		"tags": ["#WIP", " #DNS"]
 	},
 	{
-		"name": "Sink",
-		"description": "A Simple / Speedy / Secure Link Shortener with Analytics.",
-		"image": "/assets/images/projects/sink.cool.png",
-		"url": "https://sink.cool"
-	},
-	{
-		"name": "BroadcastChannel",
-		"description": "Turn your Telegram Channel into a MicroBlog.",
-		"image": "/assets/images/projects/broadcast-channel.png",
-		"url": "https://github.com/ccbikai/BroadcastChannel"
-	},
-	{
-		"name": "L(O*62).ONG",
-		"description": "Make your URL looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger",
-		"image": "/assets/images/projects/long.png",
-		"url": "https://loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo.ong"
+		"name": "Car Hacking with Flip Zero",
+		"description": "How to open 😁 your wife's car when she misplaced her keys.",
+		"image": "/assets/images/projects/car_hacking.PNG",
+		"url": "/",
+		"tags": ["#WIP", " #Hardware IOT"]
 	}
 ]

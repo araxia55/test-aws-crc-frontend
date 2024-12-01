@@ -1,5 +1,5 @@
 ---
-const { name, description, url, image } = Astro.props;
+const { name, description, url, image, tags } = Astro.props;
 ---
 
 <a
@@ -59,7 +59,7 @@ const { name, description, url, image } = Astro.props;
       </span>
       <span class="text-sm text-neutral-600 dark:text-neutral-400 block truncate"
         >{description}</span
-      >
-    </span>
+      > <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">{tags}</span>
+    </span>    
   </span>
 </a>
