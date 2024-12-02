@@ -3,7 +3,7 @@
 		"name": "AWS Cloud Resume Challenge",
 		"description": "Build and deploy your resume using HTML, CSS, JavaScript, Amazon S3, CloudFront, DynamoDB, API Gateway, Lambda, CloudFormation, IAM, Route 53, and RDS.",
 		"image": "/assets/images/projects/aws.crc.PNG",
-		"url": "https://github.com/araxia55/CRC",
+		"url": "https://github.com/araxia55/AWS-CRC",
 		"tags": ["#AWS", " #Serverless", " #API Gateway", " #Lambda"] 
 	},
 	{
