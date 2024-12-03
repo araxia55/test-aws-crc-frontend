@@ -2,7 +2,7 @@
 
 This is inspired by the [Cloud Resume Challenge](https://cloudresumechallenge.dev/docs/the-challenge/aws/).
 
-These Technology stack below were utlised to build this website:
+These are the Technology stack utlised to build this website:
 
 - HTML, Astro & Tailwind CSS
 - S3, Cloudfront, Route53
