@@ -9,16 +9,14 @@ on:
       - 'release/**'
 
 jobs:
-  deploy:
+
+  deploy_job:
     runs-on: ubuntu-latest
     
     steps:
-      # Step 1: Checkout repository
       - name: Checkout
         uses: actions/checkout@v4
-  
-  setup_credentials:
-      # Step 2: Setup AWS credentials and secrets
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -26,32 +24,43 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-southeast-1
       
-  install_node_modules:          
-      # Step 3: Install project dependencies
       - name: Install modules
-        run: npm ci
-
-  build_project:
-      # Step 4: Build the project
-      - name: Build application
-        run: npx astro build
-
-  deploy_website:
-      # Step 5: Deploy your website to S3
-      - name: Deploy to S3
-        run: aws s3 sync --delete ./dist/ s3://${{ secrets.BUCKET_ID }}
+        run: 
+          npm ci
       
-  invalidate_cache:
-      # Step 6: Invalidate CF cache
+      - name: Build application
+        run: 
+          npx astro build
+
+      - name: Deploy to S3
+        run: 
+          aws s3 sync --delete ./dist/ s3://${{ secrets.BUCKET_ID }}
+      
       - name: Create CloudFront invalidation
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DISTRIBUTION_ID }} --paths "/*"
+  
+  cypress_test_job:
+    runs-on: ubuntu-latest
+    needs: deploy_job
+
+    env:
+      ACTIONS_RUNNER_DEBUG: true
+      ACTIONS_STEP_DEBUG: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       
-  run_tests:
-      # Step 7: Run front-end tests
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Install Cypress and dependencies 🤙
+        run: |
+          npm install cypress
+          pnpm install --no-frozen-lockfile
+
       - name: Cypress Tests
         uses: cypress-io/github-action@v6
-        needs: deploy_website
         with:
-          build: npm run build
-          start: npm start
-          browser: chrome
+          build: npx astro build
+          start: npx astro preview
