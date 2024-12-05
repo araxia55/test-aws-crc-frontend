@@ -48,7 +48,7 @@ jobs:
       ACTIONS_STEP_DEBUG: true
 
     steps:
-      - name: Checkout
+      - name: Checkout ☑️
         uses: actions/checkout@v4
       
       - name: Setup pnpm
@@ -59,7 +59,7 @@ jobs:
           npm install cypress
           pnpm install --no-frozen-lockfile
 
-      - name: Cypress Tests
+      - name: Cypress Tests 📜
         uses: cypress-io/github-action@v6
         with:
           build: npx astro build
