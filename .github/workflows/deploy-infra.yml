@@ -40,11 +40,11 @@ jobs:
 
           - name: Terraform Validate
             id: validate
-            run: terraform validate --color
+            run: terraform validate -color=true
 
           - name: Terraform Plan
             id: plan
-            run: terraform plan --color
+            run: terraform plan -color=true
             continue-on-error: true
 
 
