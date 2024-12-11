@@ -62,8 +62,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
   restrictions {
     geo_restriction {
-      restriction_type = "whitelist"
-      locations        = ["US", "CA", "AU", "NZ", "AU", "SG", "DE", "PH", "ES"]
+      restriction_type = "none"
     }
   }
 
