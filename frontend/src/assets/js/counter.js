@@ -21,7 +21,11 @@ async function fetchVisitorCount() {
     try {
       const visitorCount = await fetchVisitorCount();
       console.log(`Current visitor count: ${visitorCount}`);
-      // You can update a DOM element with the visitor count here
+      
+     // Update the DOM element with the visitor count
+    const counterElement = document.getElementById('counter');
+    counterElement.innerText = visitorCount;
+
     } catch (error) {
       console.error('Error fetching visitor count:', error);
     }
