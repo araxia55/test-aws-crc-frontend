@@ -7,22 +7,9 @@ resource "aws_acm_certificate_validation" "MyCertificateValidation" {
   certificate_arn = aws_acm_certificate.MyCertificate.arn
 }
 
-# data "aws_acm_certificate" "issued" {
-#   domain   = "*.example.com"
-#   statuses = ["ISSUED"]
-# }
-
 data "aws_cloudfront_cache_policy" "cachingDisabled" {
   name = "Managed-CachingDisabled"
 }
-
-data "aws_cloudfront_origin_request_policy" "corsS3Origin" {
-  name = "Managed-CORS-S3Origin"
-}
-
-# data "aws_s3_bucket" "aws_crc" {
-#   bucket = "my-aws-crc-5555"
-# }
 
 locals {
   s3_origin_id = "my-aws-crc-5555.s3-website-us-east-1.amazonaws.com"
@@ -30,7 +17,7 @@ locals {
 
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
-    domain_name = "d1pgrriw4n0rti.cloudfront.net"
+    domain_name = aws_s3_bucket.aws_crc.bucket_regional_domain_name
     origin_id   = local.s3_origin_id
     custom_origin_config {
       origin_protocol_policy = "match-viewer"
@@ -50,7 +37,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     cached_methods           = ["GET", "HEAD"]
     target_origin_id         = local.s3_origin_id
     cache_policy_id          = data.aws_cloudfront_cache_policy.cachingDisabled.id
-    origin_request_policy_id = data.aws_cloudfront_origin_request_policy.corsS3Origin.id
 
     viewer_protocol_policy = "redirect-to-https"
     min_ttl                = 0
