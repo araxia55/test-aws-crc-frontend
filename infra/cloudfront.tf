@@ -63,13 +63,14 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
  restrictions {
     geo_restriction {
       restriction_type = "none"
+      locations        = []
     }
   }
 
   viewer_certificate {
-    acm_certificate_arn = "arn:aws:acm:us-east-1:805627787874:certificate/b9b45f25-298c-4e6c-9ca8-7d55bb703e2e"
+    acm_certificate_arn = aws_acm_certificate.MyCertificate.arn
     ssl_support_method  = "sni-only"
   }
 
-  aliases = ["raymund.cloud"]
+  aliases = ["www.raymund.cloud"]
 }
