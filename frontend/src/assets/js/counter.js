@@ -25,7 +25,7 @@ async function fetchVisitorCount() {
      // Update the DOM element with the visitor count
     const counterElement = document.getElementById('counter');
     counterElement.innerText = visitorCount;
-      
+
     } catch (error) {
       console.error('Error fetching visitor count:', error);
     }
