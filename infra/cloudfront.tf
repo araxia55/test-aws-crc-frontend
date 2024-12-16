@@ -12,12 +12,16 @@ data "aws_cloudfront_cache_policy" "cachingDisabled" {
 }
 
 locals {
+  # Unique id for the origin
   s3_origin_id = "my-aws-crc-5555.s3-website-us-east-1.amazonaws.com"
+  # S3 Website endpoint
+  s3_bucket_name = aws_s3_bucket.aws_crc.bucket
+  s3_website_domain_name = "${local.s3_bucket_name}.s3-website-us-east-1.amazonaws.com"
 }
 
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
-    domain_name = aws_s3_bucket.aws_crc.bucket_regional_domain_name
+    domain_name = local.s3_website_domain_name
     origin_id   = local.s3_origin_id
     custom_origin_config {
       origin_protocol_policy = "match-viewer"

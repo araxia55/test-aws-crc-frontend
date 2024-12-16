@@ -2,6 +2,13 @@ resource "aws_s3_bucket" "aws_crc" {
   bucket = "my-aws-crc-5555"
 }
 
+resource "aws_s3_bucket_versioning" "aws_crc_versioning" {
+  bucket = aws_s3_bucket.aws_crc.id
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
+
 resource "aws_s3_bucket_ownership_controls" "aws_crc" {
   bucket = aws_s3_bucket.aws_crc.id
   rule {
