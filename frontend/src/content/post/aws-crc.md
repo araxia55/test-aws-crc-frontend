@@ -29,7 +29,7 @@ The usuals for me when it comes to checking out resources that in my opinion pro
 - <a href="https://roadmap.sh/full-stack">Roadmap.sh - Full Stack</a>: HTML & CSS, Tailwind CSS, Javascript, node.js, RESTful API's, 
 - <a href="https://github.com/milanm/DevOps-Roadmap" target="_blank">DevOps-Roadmap</a>: CI/CD, Networking, Infrastructure as Code(IaC), Git, Github Actions, Python, AWS services, NoSQL Databases, Monitoring & Observability, etc. and did I say most of them are FREE.
 
-Establishing a strong foundation would be the best bet wether it's navigating through roadmap or actual practical experience will propel this challenge in a continuous learning mindset.
+Establishing a strong foundation would be the best bet whether it's navigating through roadmap or actual practical experience will propel this challenge in a continuous learning mindset.
 </p>
 
 <p style="text-align: justify;">
