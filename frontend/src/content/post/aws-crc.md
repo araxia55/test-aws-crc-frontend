@@ -66,7 +66,7 @@ These are the high-level steps that was employed to build the backend section.
 
 
 #### **Frontend / Backend integration** 
-It's time to bring it all together! I've learn how to integrate the frontend and backend of the website including how to write simple Cypress smoke tests. The main objective of this section is to display the `visitor_counter` table in my website to keep track of the visitor tally. This can be implemented by a Python Lambda Function with an APIGW route using a POST method for eg. in Terraform that would be under the `aws_api_gateway_integration` resource.
+It's time to bring it all together! I've learn how to integrate the frontend and backend of the website including how to write simple Cypress smoke tests. The main objective of this section is to display the **visitor_counter** table in my website to keep track of the visitor tally. This can be implemented by a Python Lambda Function with an APIGW route using a POST method for eg. in Terraform that would be under the **aws_api_gateway_integration** resource.
 
 
 Provide examples and best practices for using these services in the context of the challenge.
