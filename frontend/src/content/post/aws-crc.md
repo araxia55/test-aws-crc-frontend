@@ -44,10 +44,10 @@ Before I started the journey, I'll need to make sure I have the right gear and p
 #### **Certification prep**
 I have an upcoming certification renewal for AWS Certified Developer and Hashicorp Certified Terraform Associate so I would say I have already establish a practical sense of engineering background to initiate with this challenge. However, I'm still up for the cert renewal!
 
-#### **Building the frontend**: 
+#### **Building the Frontend**: 
 I'm by no means a frontend guy, heck I suck at making things look pretty and awesome but with the help of [Astro](https://astro.build/), [Aria Templates](https://aria.devdojo.io/), [Tailwind CSS](https://tailwindcss.com/) and Javascript I've customised the website to look minimalistic and with an option to print or download my resume, include a projects/blog section and yes! go dark mode 🖤.
 
-These are the high-level steps that was employed to build the frontend section.
+These are the high-level steps that was employed to build the Frontend section.
 
 1. Custom domain name from [namecheap.com](https://www.namecheap.com/)
 2. Utilise these AWS Services:
@@ -65,7 +65,7 @@ These are the high-level steps that was employed to build the backend section.
 2. API Gateway (APIGW) to manage requests from your web application to the database. 
 
 
-#### **frontend / Backend integration** 
+#### **Frontend / Backend integration** 
 It's time to bring it all together! I've learn how to integrate the frontend and backend of the website including how to write simple Cypress smoke tests. The main objective of this section is to display the `visitor_counter` table in my website to keep track of the visitor tally. This can be implemented by a Python Lambda Function with an APIGW route using a POST method for eg. in Terraform that would be under the `aws_api_gateway_integration` resource.
 
 
@@ -76,7 +76,7 @@ Compare the integration of AWS services to Jiu-Jitsu transitions, emphasizing th
 This is where things get really exciting! In this section, The need to automate the deployment of the website and set up continuous integration using Github Actions by defining custom deployment workflows in the repository. This is triggered when a change is pushed to a branch.
 
 These are the high-level steps that was employed to build the automation and CI/CD section.
-1. Terraforming the Frontend and backend. I opted to do this earlier rather than later starting in the Frontend Infrastructure section.
+1. Terraforming the frontend and backend. I opted to do this earlier rather than later starting in the frontend Infrastructure section.
 2. Creating an separate workflow deployment pipeline for the frontend infrastructure and deployment. Wherein, triggering the website deployment will depend upon completion of the infrastructure this is to be certain that I have the appropriate setup before I proceed with the actual deployment (Upload of s3 files in this case)
 </p>
 
