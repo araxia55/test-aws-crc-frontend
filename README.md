@@ -6,7 +6,7 @@
 The architecture diagram above illustrates the workflow of this website it starts off by 
 
 1. Pushing a commit to the [aws-crc-frontend](https://github.com/araxia55/aws-crc-frontend) repo.
-2. The commits are picked up by Github Actions and triggers the appropriate workflow pipeline to build and deploy the infrastructure once this is completed it then moves into triggering another pipeline to test then deploy the *website* - [raymund.cloud](https://www.raymund.cloud).
+2. The commits are picked up by Github Actions and triggers the appropriate workflow pipeline to build and deploy the infrastructure once this is completed it then moves into triggering another pipeline to test then deploy the *website* - [raymund.site](https://www.raymund.site).
 
 This is inspired by the [Cloud Resume Challenge](https://cloudresumechallenge.dev/docs/the-challenge/aws/).
 

@@ -1,5 +1,5 @@
 // Visitor Counter Tracking
-const visitorApiEndpoint = 'https://ygo6a7xq9g.execute-api.us-east-1.amazonaws.com/crc-prod/count/'; 
+const visitorApiEndpoint = 'https://3zolr8j7l7.execute-api.us-east-1.amazonaws.com/crc-test/count/'; 
 
 async function fetchVisitorCount() {
     try {

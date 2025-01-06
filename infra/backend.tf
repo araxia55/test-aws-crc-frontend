@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    region         = "ap-southeast-2"
-    bucket         = "crc-state-file"
-    key            = "terraform.tfstate"
-    dynamodb_table = "crc-infra-state-lock-01"
+    region         = "us-east-1"
+    bucket         = "test-crc-state-file"
+    key            = "test.crc.terraform.tfstate"
+    dynamodb_table = "test-crc-infra-state-lock-01"
     encrypt        = true
   }
 }

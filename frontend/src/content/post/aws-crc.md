@@ -91,7 +91,7 @@ These are the high-level steps that was employed to build the automation and CI/
   - prevent **denial-of-wallet** attack or **bill spamming**
   - prevent malicious API requests or using the API in a way that is not intended or authorized, such as trying to access sensitive data to perform unauthorized actions.
 
-  The API is a public API, connected to *[raymund.cloud](https://www.raymund.cloud)*, which means it's accessible to anyone on the internet. As a result, anyone can find and make requests to the API directly without any authentication or authorization. To minimize some of this attack implementing a guardrail like *rate limiting* could be beneficial.
+  The API is a public API, connected to *[raymund.site](https://www.raymund.site)*, which means it's accessible to anyone on the internet. As a result, anyone can find and make requests to the API directly without any authentication or authorization. To minimize some of this attack implementing a guardrail like *rate limiting* could be beneficial.
   
   **How to implement an API rate limit?**
 
@@ -150,6 +150,6 @@ Checkout this project in Github.
 ☁️ The AWS  Cloud Resume Challenge ☁️
 - [Frontend section](https://github.com/araxia55/aws-crc-frontend)
 - [Backend section](https://github.com/araxia55/aws-crc-backend)
-- [Portfolio website](https://www.raymund.cloud)
+- [Portfolio website](https://www.raymund.site)
 </p>
 
