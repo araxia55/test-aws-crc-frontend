@@ -10,8 +10,8 @@
 		"name": "Automate your AWS Organizations Setup",
 		"description": "Automate the setup of AWS organizations using org-formation.",
 		"image": "/assets/images/projects/aws_organizations.PNG",
-		"url": "/",
-		"tags": [" #WIP", " #AWS" , " #Identity Center", " #SSO", " #IAM"]
+		"url": "https://github.com/araxia55/aws-organizations",
+		"tags": ["#AWS Organizations", " #org-formation", " #Cloudformation", " #Github Actions"]
 	},
 	{
 		"name": "How to setup a Custom Domain Name in AWS Route53",
