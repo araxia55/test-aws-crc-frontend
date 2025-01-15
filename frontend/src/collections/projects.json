@@ -17,8 +17,8 @@
 		"name": "How to setup a Custom Domain Name in AWS Route53",
 		"description": "Use a Custom Domain Name from Namecheap, etc. in AWS",
 		"image": "/assets/images/projects/dns.PNG",
-		"url": "/",
-		"tags": ["#WIP", " #DNS"]
+		"url": "https://www.raymund.site/post/custom-dns/",
+		"tags": ["#DNS", " #Route53", " #Custom Domain Name"]
 	},
 	{
 		"name": "Car Hacking with Flip Zero",
