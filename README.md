@@ -2,7 +2,7 @@
 
 This is a test site for [raymund.cloud](https://www.raymund.cloud)
 
-![Ray's Portfolio Website](./frontend/public/assets/images/projects/aws_crc_architecture_diagram.png)
+![Ray's Portfolio Website](./frontend/public/assets/images/projects/aws_crc_architecture_diagram_v2.png)
 
 <p style="text-align: justify;">
 The architecture diagram above illustrates the workflow of this website it starts off by 

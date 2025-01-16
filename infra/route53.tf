@@ -2,7 +2,25 @@ resource "aws_route53_zone" "test_raymund" {
   name = "raymund.site"
 }
 
-# resource "aws_route53_record" "root_a_record" {
+data "aws_cloudfront_distribution" "s3_test_distribution" {
+  id = data.aws_s3_bucket.test_aws_crc.id
+}
+
+output "cloudfront_distribution_id" {
+  value = data.aws_cloudfront_distribution.s3_test_distribution.id
+}
+
+resource "aws_route53_record" "root_a_record" {
+  zone_id = aws_route53_zone.test_raymund.zone_id
+  name    = aws_route53_zone.test_raymund.name
+  type    = "A"
+
+  alias {
+    name                   = aws_cloudfront_distribution.s3_test_distribution.domain_name
+    zone_id                = aws_cloudfront_distribution.s3_test_distribution.hosted_zone_id
+    evaluate_target_health = false
+  }
+}
 #   zone_id = aws_route53_zone.test_raymund.zone_id
 #   name    = aws_route53_zone.test_raymund.name
 #   type    = "A"
