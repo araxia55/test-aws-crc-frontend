@@ -1,4 +1,4 @@
-name: Deploy AWS CRC Front-end
+name: Deploy Test AWS CRC Front-end
 
 run-name: ${{ github.actor }} has pushed changes to ${{ github.event.ref }}
 
