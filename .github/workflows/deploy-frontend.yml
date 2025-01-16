@@ -17,6 +17,9 @@ on:
     - 'release/frontend/*'
     types: [opened,reopened,synchronize]
 
+permissions:
+  security-events: write
+
 jobs:
 
   build_and_deploy_frontend:
