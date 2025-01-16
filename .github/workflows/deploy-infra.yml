@@ -1,4 +1,4 @@
-name: Build & Deploy AWS CRC Terraform Infrastructure 🏗️
+name: Build & Deploy Test AWS CRC Terraform Infrastructure 🏗️
 
 run-name: ${{ github.actor }} has pushed changes to ${{ github.event.ref }}
 

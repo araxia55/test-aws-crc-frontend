@@ -86,3 +86,20 @@ jobs:
           publish-summary: true
           summary-title: 'website-portfolio-test'
 
+  codeql_scan:
+    runs-on: ubuntu-latest
+    needs: build_and_deploy_frontend
+
+    steps:
+      - name: Checkout ☑️
+        uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: javascript
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          category: "/language:javascript"
