@@ -1,4 +1,4 @@
-name: tfsec
+name: Scan Terraform files with tfsec 🔍
 
 on:
   push:
@@ -13,9 +13,16 @@ jobs:
     steps:
     - name: Clone repo
       uses: actions/checkout@master
-    - name: tfsec
+    - name: Scan Terraform files with tfsec
       uses: aquasecurity/tfsec-action@v1.0.0
       with:
         working_directory: ./infra
         version: latest
         format: json
+
+    - name: Upload tfsec report 📄
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: tfsec-report
+        path: ./infra/tfsec-results.json
