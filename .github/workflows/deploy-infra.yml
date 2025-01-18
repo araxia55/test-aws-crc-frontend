@@ -55,7 +55,7 @@ jobs:
             run: |
               curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
               tfsec . --format json --out tfsec-results.json
-            continue-on-error: true
+            # continue-on-error: false
           
           - name: Upload tfsec report 📄
             if: always()
