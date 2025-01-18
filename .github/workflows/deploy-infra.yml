@@ -48,27 +48,4 @@ jobs:
 
           - name: Terraform Apply ✅
             id: apply
-            run: terraform apply -auto-approve 
-
-          - name: Scan Terraform files with tfsec 🔍
-            id: tfsec
-            run: |
-              curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
-              tfsec . --format json --out tfsec-results.json
-            continue-on-error: true
-          
-          - name: Upload tfsec report 📄
-            if: always()
-            uses: actions/upload-artifact@v4
-            with:
-              name: tfsec-report
-              path: ./infra/tfsec-results.json
-          
-          - name: Debug Info 🐞
-            run: |
-              echo "AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}"
-              echo "AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-              echo "Terraform version:"
-              terraform --version
-              echo "Directory contents:"
-              ls -al ./infra
+            run: terraform apply -auto-approve
