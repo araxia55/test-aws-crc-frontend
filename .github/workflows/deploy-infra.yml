@@ -63,3 +63,12 @@ jobs:
             with:
               name: tfsec-report
               path: ./infra/tfsec-results.json
+          
+          - name: Debug Info 🐞
+            run: |
+              echo "AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}"
+              echo "AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+              echo "Terraform version:"
+              terraform --version
+              echo "Directory contents:"
+              ls -al ./infra
