@@ -24,8 +24,8 @@ jobs:
           - name: Configure AWS Credentials 🔏
             uses: aws-actions/configure-aws-credentials@v1
             with:
-              aws-access-key-id: ${{ secrets.TF_ACCESS_KEY_ID }}
-              aws-secret-access-key: ${{ secrets.TF_SECRET_ACCESS_KEY }}
+              aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+              aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
               aws-region: us-east-1
         
           - name: Setup Terraform 🛠️
@@ -59,7 +59,7 @@ jobs:
           
           - name: Upload tfsec report 📄
             if: always()
-            uses: actions/upload-artifact@v3
+            uses: actions/upload-artifact@v4
             with:
               name: tfsec-report
               path: tfsec-results.json
