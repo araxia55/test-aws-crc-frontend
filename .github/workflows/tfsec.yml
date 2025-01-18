@@ -5,25 +5,23 @@ on:
     branches:
       - main
   pull_request:
-
 jobs:
   tfsec:
-    name: tfsec
+    name: tfsec sarif report
     runs-on: ubuntu-latest
-    steps:
-    - name: Clone repo
-      uses: actions/checkout@master
-    - name: Scan Terraform files with tfsec
-      uses: aquasecurity/tfsec-action@v1.0.0
-      with:
-        working_directory: ./infra
-        version: latest
-        format: json
-        sort_fail: true
 
-    - name: Upload tfsec report 📄
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: tfsec-report
-        path: ./infra/tfsec-results.json
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@master
+
+      - name: tfsec
+        uses: tfsec/tfsec-sarif-action@main
+        with:
+          sarif_file: tfsec.sarif         
+
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          # Path to SARIF file relative to the root of the repository
+          sarif_file: tfsec.sarif    
+       
