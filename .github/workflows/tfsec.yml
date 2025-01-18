@@ -19,6 +19,7 @@ jobs:
         working_directory: ./infra
         version: latest
         format: json
+        sort_fail: true
 
     - name: Upload tfsec report 📄
       if: always()
