@@ -2,14 +2,6 @@ resource "aws_route53_zone" "test_raymund" {
   name = "raymund.site"
 }
 
-data "aws_cloudfront_distribution" "s3_test_distribution" {
-  id = data.aws_s3_bucket.test_aws_crc.id
-}
-
-output "cloudfront_distribution_id" {
-  value = data.aws_cloudfront_distribution.s3_test_distribution.id
-}
-
 resource "aws_route53_record" "root_a_record" {
   zone_id = aws_route53_zone.test_raymund.zone_id
   name    = aws_route53_zone.test_raymund.name
