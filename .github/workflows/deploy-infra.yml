@@ -48,4 +48,28 @@ jobs:
 
           - name: Terraform Apply ✅
             id: apply
-            run: terraform apply -auto-approve
+            run: terraform apply -auto-approve 
+
+    Scan_Terraform_with_tfsec:
+      name: tfsec sarif report 🔍
+      runs-on: ubuntu-latest
+      needs: build_and_deploy_infra
+      permissions:
+        actions: read
+        contents: read
+        security-events: write
+  
+      steps:
+        - name: Clone repo 🔄
+          uses: actions/checkout@master
+  
+        - name: Run tfsec 🔍
+          uses: aquasecurity/tfsec-sarif-action@v0.1.4
+          with:
+            sarif_file: tfsec.sarif
+  
+        - name: Upload SARIF file ⬆️
+          uses: github/codeql-action/upload-sarif@v3
+          with:
+            # Path to SARIF file relative to the root of the repository
+            sarif_file: tfsec.sarif    
