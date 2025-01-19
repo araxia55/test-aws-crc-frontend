@@ -106,9 +106,13 @@ jobs:
         uses: github/codeql-action/analyze@v3
         with:
           category: "/language:javascript"
-      
+
+      - name: Print results directory
+        run: |
+          ls -la results/
+
       - name: Upload CodeQL SARIF Results ⬆️
         uses: github/codeql-action/upload-sarif@v3
         with:
           # Path to SARIF file relative to the root of the repository
-          sarif_file: codeql-results.sarif
+          sarif_file: results/codeql-results.sarif
