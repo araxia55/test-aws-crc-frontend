@@ -51,7 +51,7 @@ jobs:
             run: terraform apply -auto-approve 
 
     Scan_Terraform_with_tfsec:
-      name: tfsec sarif report 🔍
+      name: Scan Terraform files with tfsec 🔍
       runs-on: ubuntu-latest
       needs: build_and_deploy_infra
       permissions:
