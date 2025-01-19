@@ -106,4 +106,6 @@ jobs:
       - name: Perform CodeQL Analysis 🔎
         uses: github/codeql-action/analyze@v3
         with:
-          category: "/language:javascript,html,typescript"
+          category: "language:javascript,
+                     language:html,
+                     language:typescript"
