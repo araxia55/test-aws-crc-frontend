@@ -89,7 +89,7 @@ jobs:
           publish-summary: true
           summary-title: 'website-portfolio-test'
 
-  codeql_scan:
+  crc_codeql_scan:
     runs-on: ubuntu-latest
     needs: cypress_test_website
 
@@ -97,12 +97,18 @@ jobs:
       - name: Checkout ☑️
         uses: actions/checkout@v4
 
-      - name: Initialize CodeQL
+      - name: Initialize CodeQL 🔄
         uses: github/codeql-action/init@v3
         with:
           languages: javascript
 
-      - name: Perform CodeQL Analysis
+      - name: Perform CodeQL Analysis 🔎
         uses: github/codeql-action/analyze@v3
         with:
           category: "/language:javascript"
+      
+      - name: Upload CodeQL SARIF Results ⬆️
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          # Path to SARIF file relative to the root of the repository
+          sarif_file: codeql-results.sarif
