@@ -28,8 +28,15 @@
 	{
 		"dates": "Mar 2014· Sep 2017",
 		"role": "Security Operations Engineer",
-		"company": "Deutsche Bank. Singapore (On-site)",
+		"company": "Deutsche Bank, Singapore (On-site)",
 		"description": "Implemented security best practices for log management and analysis to harden system security, resulting in a 50% decrease in security incidents.",
 		"logo": "/assets/images/experiences/db.png"
+	},
+	{
+		"dates": "Jun 2011· Feb 2014",
+		"role": "Database Engineer",
+		"company": "IBM, Philippines (On-site)",
+		"description": "Established the research and development stages for a cloud platform utilising open source database technology that is provisioned to host 15 million pre-paid subscribers.",
+		"logo": "/assets/images/experiences/ibm_logo.png"
 	}
 ]
