@@ -1,12 +1,12 @@
 [
     {
-        "CloudPlatform": [ "AWS, ", "Digital Ocean"],
+        "CloudPlatform": [ "AWS, ", "Azure"],
         "ProgrammingLanguage": [ "Python, ", "PHP"],
-        "CICD": ["TeamCity, ", "Octopus Deploy, ", "Artifactory, ", "Codepipeline"],
+        "CICD": ["TeamCity, ", "Octopus Deploy, ", "Artifactory, ", "Codepipeline, ", "Github Actions"],
         "Infrastructure": ["Terraform, ", "Kotlin DSL"],
         "ContainersOrchestration": ["Docker, ", "Kubernetes"],
         "ObservabilityMonitoring": ["NewRelic, ", "PagerDuty"],
-        "Databases": ["MySQL, ", "Postgres, ", "Aurora"],
+        "Databases": ["MySQL, ", "Postgres, ", "Aurora", ", Oracle"],
         "VCSIT": ["Github, ", "GitLab, ", "Jira"]
     }
 ]
