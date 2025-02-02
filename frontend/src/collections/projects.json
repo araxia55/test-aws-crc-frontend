@@ -1,5 +1,12 @@
 [
 	{
+		"name": "Azure Kubernetes Resume Challenge",
+		"description": "Build, deploy, manage and scale your E-Commerce webapp utilising Azure Kubernetes Service, Helm, Terraform, and PHP",
+		"image": "/assets/images/projects/aks_cluster_westus1.png",
+		"url": "https://github.com/araxia55/azure-kubernetes-resume-challenge",
+		"tags": ["#Azure", " #Helm", " #Terraform", " #PHP"] 
+	},
+	{
 		"name": "AWS Cloud Resume Challenge",
 		"description": "Build and deploy your resume using HTML, CSS, JavaScript, Amazon S3, CloudFront, DynamoDB, API Gateway, Lambda, CloudFormation, IAM, Route 53, and RDS.",
 		"image": "/assets/images/projects/aws.crc.PNG",
