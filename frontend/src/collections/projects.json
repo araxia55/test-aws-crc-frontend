@@ -1,6 +1,6 @@
 [
 	{
-		"name": "Azure Kubernetes Resume Challenge",
+		"name": "E-commerce Web App Deployment in Kubernetes(K8s) Cluster",
 		"description": "Build, deploy, manage and scale your E-Commerce webapp utilising Azure Kubernetes Service, Helm, Terraform, and PHP",
 		"image": "/assets/images/projects/aks_cluster_westus1.png",
 		"url": "https://github.com/araxia55/azure-kubernetes-resume-challenge",
