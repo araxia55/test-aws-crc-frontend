@@ -1,5 +1,12 @@
 [
 	{
+		"name": "CLI Tool for AWS EC2 Instance Management",
+		"description": "A CLI tool to manage your AWS EC2 instances using Python, Typer, and Boto3.",
+		"image": "/assets/images/projects/kumo-penguin.png",
+		"url": "https://github.com/araxia55/kumo-cli",
+		"tags": ["#Python", " #Boto3", " #Typer"] 
+	},
+	{
 		"name": "E-commerce Web App Deployment in Kubernetes(K8s) Cluster",
 		"description": "Build, deploy, manage and scale your E-Commerce webapp utilising Azure Kubernetes Service, Helm, Terraform, and PHP",
 		"image": "/assets/images/projects/aks_cluster_westus1.png",
